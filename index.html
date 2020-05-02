@@ -3,6 +3,17 @@
   <title>Github Page</title>
 <head>
 <body>
-  <h1>My Test Website!</h1>
+  <div class="content">
+    <canvas id="test" width="480" height="320">test</canvas>
+  </div>
+
+  <script>
+    var  c = document.getElementById("test");
+    var ctx = getContext('2d');
+
+    ctx.font = "20px Georgia";
+    ctx.fillStyle = 'blue';
+    ctx.fillText("Hello World!", 10, 50);
+  </script>
 </body>
 </html>

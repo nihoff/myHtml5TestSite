@@ -1,19 +1,30 @@
+<!DOCTYPE html>
 <html>
 <head>
   <title>Github Page</title>
 <head>
 <body>
-  <div class="content">
-    <canvas id="test" width="480" height="320">test</canvas>
-  </div>
-
+  <canvas id="test" class="content" width="480" height="320">Your browser does not support the HTML5 canvas tag.</canvas>
   <script>
-    var  c = document.getElementById("test");
-    var ctx = getContext('2d');
+    var c = document.getElementById("test");
+    var helloTxt = c.getContext('2d');
 
-    ctx.font = "20px Georgia";
-    ctx.fillStyle = 'blue';
-    ctx.fillText("Hello World!", 10, 50);
+    helloTxt.font = "Bold 21px Arial";
+    helloTxt.fillStyle = 'blue';
+    helloTxt.fillText("Hello World!", 10, 30);
+
+    var line = c.getContext('2d');
+    line.beginPath();
+    line.lineWidth = 4;
+    line.moveTo(5,38);
+    line.lineTo(130, 46);
+    line.strokeStyle = 'red';
+    line.stroke();
+
+    var visitorText = c.getContext('2d');
+    visitorText.font ="14px Arial";
+    visitorText.fillStyle= "grey";
+    visitorText.fillText("Hello Visitor!", 10, 60);
   </script>
 </body>
 </html>
